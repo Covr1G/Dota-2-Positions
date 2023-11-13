@@ -97,3 +97,38 @@ header nav a:nth-child(5):hover {
     background-color: #0BB13A;
 }
 
+div.section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    color: #fff;
+    border-bottom: 3px solid #000;
+    font-size: 4rem;
+}
+
+div.section p {
+    font-size: 1.25rem;
+}
+
+div#carry {
+    background-color: #F0383D;
+}
+
+div#mid {
+    background-color: #1F33A8;
+}
+
+div#offlabe {
+    background-color: #F16B27;
+}
+
+div#soft {
+    background-color: #960EC8;
+}
+
+div#hard {
+    background-color: #0BB13A;
+}
