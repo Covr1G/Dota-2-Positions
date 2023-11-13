@@ -6,6 +6,94 @@
 }
 
 html {
-    scroll-behavior; smooth;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.5s ease;
+}
+
+.warning {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #373737;
+    font-size: 1rem;
+    padding: 20px 0;
+}
+
+header {
+    width: 100%;
+}
+
+header nav {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background-color: #343434;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    padding: 14px 0;
+    z-index: 1;
+    width: 100%;
+    font-size: 1.3rem;
+    border: 2px solid #000;
+    border-top-width: 0;
+    border-bottom-width: 4px;
+    transition: all 0.5s ease;
+}
+
+header nav::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(90deg, #F0383D 0 calc(20vw - 3px), 
+    #1F33A8 0 calc(40vw - 6px), 
+    #F16B27 0 calc(60vw - 10px), 
+    #960EC8 0 calc(80vw - 13px), 
+    #0BB13A 0 100vw);
+     animation: scroll-progress linear;
+     animation-timeline: scroll(root);
+}
+
+@keyframes scroll-progress {
+    100% {
+        width: 100%;
+    }
+}
+
+header nav a:nth-child(2):hover {
+    background-color: #1F33A8;
+}
+
+header nav a:nth-child(3):hover {
+    background-color: #F16B27;
+}
+
+header nav a:nth-child(4):hover {
+    background-color: #960EC8;
+}
+
+header nav a:nth-child(5):hover {
+    background-color: #0BB13A;
 }
 
